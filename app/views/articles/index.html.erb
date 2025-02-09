@@ -1,0 +1,10 @@
+<div class="my-container">
+  <ul class="list-group list-group-flush">
+    <% @articles.each do |article| %>
+    <li class="list-group-item">
+      <h1><%= link_to article.title, article_path(article) %></h1>
+      <p><%= "#{article.content.split(" ").first(15).join(" ")}..." %></p>
+    </li>
+    <% end %>
+  </ul>
+</div>

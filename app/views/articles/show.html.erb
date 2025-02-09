@@ -1,0 +1,21 @@
+<div class="my-container">
+
+  <h1 class="article-title-show">
+    <%= @article.title %>
+    <div class="buttons">
+      <%= link_to edit_article_path(@article) do %>
+          <i class="fa-regular fa-pen-to-square"></i>
+      <% end %>
+      <%= link_to article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+        <i class="fa-solid fa-trash"></i>
+      <% end %>
+    </div>
+  </h1>
+
+  <div class="separator"></div>
+
+  <p class="article-content-show">
+    <%= @article.content %>
+  </p>
+
+</div>
